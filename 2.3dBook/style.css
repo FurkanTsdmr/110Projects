@@ -1,0 +1,143 @@
+body{
+    height: 100%;
+    width: 100vh;
+    background: url(img/spaces.gif);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    margin-top: 15%;
+    margin-left:20%;
+}
+
+.book{
+    height: 450px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    position: relative;
+    backface-visibility: visible;
+}
+
+.front,
+.back,
+.page1,
+.page2,
+.page3,
+.page4,
+.page5,
+.page6 {
+    height: 100%;
+    width: 240px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: transform 0.5s ease-in-out, box-shadow 0.35s ease-in-out;
+}
+
+
+.front,.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.front,
+.page1,
+.page3,
+.page5{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.back,
+.page2,
+.page4,
+.page6{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.page1{
+    background-color: whitesmoke;
+}
+.page2{
+    background-color: whitesmoke;
+}
+.page3{
+    background-color: whitesmoke;
+}
+.page4{
+    background-color: whitesmoke;
+}
+.page5{
+    background-color: whitesmoke;
+}
+.page6{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quote{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.author{
+    text-shadow: 5px 5px 10px grey;
+    color: blue;
+    font-weight: bold;
+}
+
+.book:hover .front {
+    transform: rotateY(-160deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .book:hover .page1 {
+    transform: rotateY(-150deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .book:hover .page2 {
+    transform: rotateY(-30deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .book:hover .page3 {
+    transform: rotateY(-140deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .book:hover .page4 {
+    transform: rotateY(-40deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .book:hover .page5 {
+    transform: rotateY(-130deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .book:hover .page6 {
+    transform: rotateY(-50deg) scale(1.1);
+    box-shadow: 0 1em 3em 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .book:hover .back {
+    transform: rotateY(-20deg) scale(1.1);
+  }
+  
+
+
+
+
+
