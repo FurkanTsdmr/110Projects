@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: tomato;
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    margin-top: 22px;
+}
+.section{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.container{
+    margin: 0 auto;
+    perspective: 1020px;
+}
+.container:hover .card,
+.container.hover .card{
+    transform: rotateY(-180deg);
+}
+
+.container,
+.front,
+.back{
+    height: 300px;
+    width: 475px;
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+.front,
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 35px;
+    backface-visibility: hidden;
+}
+.front{
+    transform: rotateY(0deg);
+    background-color: rgb(89, 211, 170);
+    box-shadow: 4px 4px 4px gray;
+    z-index: 2;
+}
+.back{
+    transform: rotateY(180deg);
+    background-color: darkgray;
+     box-shadow: 4px 4px 4px gray;
+}
+.card-body{
+    padding: 1rem;
+}
